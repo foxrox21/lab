@@ -3,8 +3,8 @@ event.respondWith(doRedirects(event.request))
 });
 const newLocationHost = "developers.cloudflare.com/learning-paths/get-started/";
 async function doRedirects(request) {
-let reqUA = request.headers.get('user-agent');
-if (reqUA.matches('curl').true) {
+let reqUA = request.headers.get('user-agent') || "";
+if (reqUA.toLowerCase().includes("curl")) {
 let newLocation = "https://"+newLocationHost
 return Response.redirect(newLocation, 302);
 }
