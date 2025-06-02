@@ -1,4 +1,5 @@
 {
-"name": "lab",
-"compatibility_date": "2025-06-02"
+  "name": "lab",
+  "compatibility_date": "2025-06-02",
+  "main": "worker.js"
 }
